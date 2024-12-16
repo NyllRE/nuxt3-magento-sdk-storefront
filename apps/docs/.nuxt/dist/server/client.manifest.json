@@ -1,15 +1,18 @@
 {
   "@vite/client": {
+    "prefetch": true,
     "isEntry": true,
     "file": "@vite/client",
     "css": [],
     "module": true,
     "resourceType": "script"
   },
-  "/Users/richardrohrig/m2/nuxt3-magento-sdk-storefront/node_modules/nuxt/dist/app/entry.js": {
+  "C:/Users/alix6/development/nuxt3-magento-sdk-storefront/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
+    "prefetch": true,
+    "preload": true,
     "isEntry": true,
-    "file": "/Users/richardrohrig/m2/nuxt3-magento-sdk-storefront/node_modules/nuxt/dist/app/entry.js"
+    "file": "C:/Users/alix6/development/nuxt3-magento-sdk-storefront/node_modules/nuxt/dist/app/entry.js"
   }
 }
