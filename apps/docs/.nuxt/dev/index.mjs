@@ -571,7 +571,7 @@ const _inlineRuntimeConfig = {
       "version": "4.0.4"
     },
     "nuxt-link-checker": {
-      "version": "4.0.2",
+      "version": "4.0.4",
       "hasSitemapModule": true,
       "rootDir": "C:/Users/alix6/development/nuxt3-magento-sdk-storefront/apps/docs",
       "isNuxtContentDocumentDriven": {
@@ -6712,6 +6712,7 @@ function RuleNoErrorResponse() {
 function RuleNoJavascript() {
   return defineRule({
     id: "no-javascript",
+    externalLinks: true,
     test({ link, report }) {
       if (link.startsWith("javascript:")) {
         report({
@@ -6824,6 +6825,9 @@ function RuleTrailingSlash() {
     id: "trailing-slash",
     test({ report, link, siteConfig }) {
       const $url = parseURL(link);
+      if ($url.pathname === "" && $url.hash) {
+        return;
+      }
       const isFile = $url.pathname.split("/").pop().includes(".");
       if ($url.pathname === "/" || isFile)
         return;
@@ -6900,7 +6904,8 @@ function inspect(ctx, rules) {
   let processing = true;
   for (const rule of validInspections) {
     const isFakeAbsolute = link.startsWith("//") && !link.includes(".");
-    const isExternalLink = url.host && url.host !== siteConfigHost && !isFakeAbsolute;
+    const hasNonHttpProtocol = hasProtocol(link) && !link.startsWith("http");
+    const isExternalLink = hasNonHttpProtocol || url.host && url.host !== siteConfigHost && !isFakeAbsolute;
     if (!rule.externalLinks && isExternalLink) {
       continue;
     }

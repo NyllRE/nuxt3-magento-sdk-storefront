@@ -13,9 +13,9 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { sdk } from '~/sdk.config';
-import ProductCard from '~/modules/catalog/category/components/ProductCard.vue'
-import CategoryFilter from '~/modules/catalog/category/components/CategoryFilter.vue'
+import { sdk } from '@/sdk.config';
+import ProductCard from '@/modules/catalog/category/components/ProductCard.vue'
+import CategoryFilter from '@/modules/catalog/category/components/CategoryFilter.vue'
 
 const routeData = useState<{ type: string, uid: string }>('routeData')
 

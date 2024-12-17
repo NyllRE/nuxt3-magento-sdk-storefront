@@ -4,10 +4,9 @@ export default function () {
 
     const getCms = async () => {
         try {
-            const {data: {cmsPage: pageData}, error, errors} = await sdk.magento.cmsPage({
-                identifier: 'home'
-            })
+            const {data: {cmsPage: pageData}, error, errors} = await sdk.magento.cmsPage('home')
 
+            console.log(pageData)
             return {pageData}
         } catch (error) {
             if (error instanceof Error) {

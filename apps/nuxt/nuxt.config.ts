@@ -4,10 +4,10 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   runtimeConfig: {
     public: {
-      demoContent: process.env.VSF_DEMO_CONTENT,
-      pageBuilder: process.env.VSF_PAGE_BUILDER_MODULE,
-      imageProvider: process.env.NUXT_IMAGE_PROVIDER,
-      magentoBaseUrl: process.env.MAGENTO_BASE_URL,
+      vsfDemoContent: false,
+      vsfPageBuilderModule: false,
+      nuxtImageProvider: 'nuxt-image',
+      magentoBaseUrl: 'http://localhost:8181/magento',
     }
   }
 })

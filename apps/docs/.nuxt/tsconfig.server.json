@@ -78,7 +78,7 @@
         "../../../node_modules/@nuxt/schema"
       ],
       "nuxt": [
-        "../../../node_modules/nuxt"
+        "../node_modules/nuxt"
       ],
       "~": [
         "./.."

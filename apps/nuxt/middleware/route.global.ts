@@ -9,7 +9,8 @@ interface ExtendedRoutableInterface extends RoutableInterface {
 export default defineNuxtRouteMiddleware(async (to, from) => {
 
     try {
-        const mageRoute = await sdk.magento.route({url: to.path})
+        const mageRoute = await sdk.magento.route(to.path)
+        console.log('route', mageRoute.data.route)
         const route = mageRoute?.data?.route as ExtendedRoutableInterface
         const routeData = {
             type: route?.type,
