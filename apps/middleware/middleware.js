@@ -1,6 +1,6 @@
 import { createServer } from "@vue-storefront/middleware";
 import { integrations } from "./middleware.config.js";
-import cors from "cors";
+// import cors from "cors";
 import consola from "consola";
 
 (async () => {
