@@ -1,1 +1,0 @@
-export { default } from "file:///C:/Users/alix6/development/nuxt3-magento-sdk-storefront/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
